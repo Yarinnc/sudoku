@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Choose a Difficulty</title>
+  </head>
+  <body>
+    <div id="diffOuter">
+      <div id="diffInner">
+        <h1>Welcome abcd!</h1>
+        <p>Welcome to our Sudoku game!</p>
+        <br />
+        <p>
+          The basic rule to this game is to fill in the numbers 1-9 exactly once
+          in every row, column, and 3x3 region.
+        </p>
+        <br />
+        <h4>Please Choose a Difficulty:</h4>
+        <button onclick="createEasyGame()" value="easy" class="diffBtn">
+          Easy
+        </button>
+        <button onclick="createNormalGame()" value="normal" class="diffBtn">
+          Normal
+        </button>
+        <button onclick="createHardGame()" value="hard" class="diffBtn">
+          Hard
+        </button>
+        <div id="btnDiv"></div>
+        <button class="game-btns" id="finish-btn" onclick="finish()">
+          Finish
+        </button>
+        <button class="game-btns" id="again-btn" onclick="again()">
+          Try Again
+        </button>
+        <button class="game-btns" id="solve-btn" onclick="createSolve()">
+          Solve
+        </button>
+      </div>
+      <!-- <button onclick="createSolve()">solve</button> -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

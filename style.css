@@ -1,0 +1,141 @@
+body {
+  background-color: #3c6255;
+}
+table {
+  margin: 0 auto;
+  position: relative;
+  border: 3px solid black;
+  border-collapse: collapse;
+}
+td {
+  height: 37px;
+  width: 37px;
+  min-width: 45px;
+  min-height: 45px;
+  text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+td,
+tr {
+  border: 1px solid black;
+}
+
+/* select every third element  */
+td:nth-child(3n) {
+  border-right: 3px solid black;
+}
+/* select every third element  */
+tr:nth-child(3n) {
+  border-bottom: 3px solid black;
+}
+
+input {
+  height: 35px;
+
+  margin: 10 10 10 10;
+  text-align: center;
+  border: none;
+  background-color: #eae7b1;
+  font-size: 15px;
+}
+
+h2 {
+  text-align: center;
+}
+h1 {
+  font-size: 50px;
+}
+#login-outer {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+#login-inner {
+  border-radius: 15px;
+  background-color: #eae7b1;
+  padding: 10px 10px 100px 10px;
+}
+.loginInp {
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+#enterBtn {
+  width: 150px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  color: #eae7b1;
+  margin-top: 60px;
+  background-color: #61876e;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+  border-radius: 10px;
+}
+#enterBtn:hover {
+  background-color: #3c6255;
+}
+#enterBtn:active {
+  background-color: #61876e;
+}
+#diffOuter {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+#diffInner {
+  border-radius: 15px;
+  background-color: #eae7b1;
+
+  padding: 10px 30px 100px 30px;
+}
+.diffBtn {
+  width: 150px;
+  height: 40px;
+  color: #eae7b1;
+  margin: 0 auto;
+  margin-top: 60px;
+  background-color: #61876e;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 10px;
+}
+.diffBtn:hover {
+  background-color: #3c6255;
+}
+.diffBtn:active {
+  background-color: #61876e;
+}
+
+.user-inputs {
+  color: #3c6255;
+}
+
+.game-btns {
+  display: none;
+  width: 150px;
+  height: 40px;
+  color: #eae7b1;
+  margin: 0 auto;
+  margin-top: 60px;
+  background-color: #61876e;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.game-btns:hover {
+  background-color: #3c6255;
+}
+.game-btn:active {
+  background-color: #61876e;
+}
