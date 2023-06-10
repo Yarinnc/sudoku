@@ -50,6 +50,7 @@ function createTable(tableData) {
   //create a sudoku table
   let table = document.createElement("table");
   let tableBody = document.createElement("tbody");
+
   //creating table rows
   tableData.forEach(function (rowData) {
     let row = document.createElement("tr");
@@ -82,8 +83,8 @@ function createTable(tableData) {
       input.setAttribute("maxlength", "1");
       input.setAttribute("min", "1");
       input.setAttribute(
-        "oninput", //allowing only 1 character to be entered
-        "javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
+        "oninput",
+        "limitInputLength(this, 1);" // Assign the function name as a string
       );
 
       input.setAttribute("class", "user-inputs");
@@ -92,6 +93,29 @@ function createTable(tableData) {
     }
   });
 }
+
+function limitInputLength(input, maxLength) {
+  // Remove non-digit characters from the input value
+  input.value = input.value.replace(/\D/g, "");
+
+  // Get the numeric value from the input
+  let number = parseInt(input.value);
+
+  // Check if the number is within the range of 1 to 9
+  if (isNaN(number) || number < 1 || number > 9) {
+    if (input.value.length > 1) {
+      // Remove the last character if it is not within the range
+      input.value = input.value.slice(0, -1);
+    } else {
+      // Clear the input value if it doesn't contain a valid number
+      input.value = "";
+    }
+  } else if (input.value.length > maxLength) {
+    // Truncate the input value if it exceeds the maximum length
+    input.value = input.value.slice(0, maxLength);
+  }
+}
+
 function createTableSolved(tableData) {
   //showing the solution
   let table = document.createElement("table");
@@ -251,7 +275,7 @@ var grids = [
 ];
 
 function createEasyGame() {
-  const index = Math.floor(Math.random() * grids.length); //generate a random index
+  const index = Math.floor(Math.random() * grids.length); //generate a random index to select one of the grids
   localStorage.setItem("index", index); //save it in local storage
   var randomMatrix = grids[index];
 

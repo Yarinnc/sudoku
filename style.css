@@ -35,7 +35,7 @@ tr:nth-child(3n) {
 
 input {
   height: 35px;
-
+  width: 35px;
   margin: 10 10 10 10;
   text-align: center;
   border: none;
